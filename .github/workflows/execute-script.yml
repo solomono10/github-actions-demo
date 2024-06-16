@@ -1,0 +1,13 @@
+name: Execute a script
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: print comment
+        run: |
+            chmod +x
+            ./hello.sh
+
+      
