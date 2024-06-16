@@ -13,12 +13,15 @@ jobs:
       - name: print comment
         run: |
           sleep 60s
-          echo "I am job 2"
+          chmod +x hello.sh
+          sh ./hello.sh
   test_job_3:
     needs: [build_job_1, deploy_job_2]
     runs-on: ubuntu-latest
     steps:
       - name: print comment
-        run: echo "I am job 3"
+        run: |
+          cat hello.txt
+          echo "I am job 3"
 
       
