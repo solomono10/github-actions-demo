@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: print comment
         run: |
-            chmod +x
+            chmod +x hello.sh
             ./hello.sh
 
       
