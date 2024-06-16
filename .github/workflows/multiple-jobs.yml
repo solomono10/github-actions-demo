@@ -7,6 +7,7 @@ jobs:
       - name: print comment
         run: echo "I am job 1"
   deploy_job_2:
+    needs: build_job_1
     runs-on: ubuntu-latest
     steps:
       - name: print comment
@@ -14,6 +15,7 @@ jobs:
           sleep 60s
           echo "I am job 2"
   test_job_3:
+    needs: [build_job_1, deploy_job_2]
     runs-on: ubuntu-latest
     steps:
       - name: print comment
