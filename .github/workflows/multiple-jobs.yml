@@ -10,7 +10,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print comment
-        run: echo "I am job 2"
+        run: |
+          sleep 60s
+          echo "I am job 2"
   test_job_3:
     runs-on: ubuntu-latest
     steps:
