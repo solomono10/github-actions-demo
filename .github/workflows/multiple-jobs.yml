@@ -1,0 +1,20 @@
+name: Execute a script
+on: push
+jobs:
+  build_job_1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print comment
+        run: echo "I am job 1"
+  deploy_job_2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print comment
+        run: echo "I am job 2"
+  test_job_3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print comment
+        run: echo "I am job 3"
+
+      
