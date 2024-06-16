@@ -13,15 +13,23 @@ jobs:
       - uses: actions/checkout@v4
       - name: print comment
         run: |
-          sleep 60s
           chmod +x hello.sh
           sh ./hello.sh
+      - name: upload file
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: ./hello.sh
   test_job_3:
     needs: [build_job_1, deploy_job_2]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: print comment
+      - name: download file
+        uses: actions/download-artifact@v4
+        with:
+          name: my-artifact
+      - name: read file
         run: |
           cat hello.txt
           echo "I am job 3"
