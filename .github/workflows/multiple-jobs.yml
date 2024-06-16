@@ -10,6 +10,7 @@ jobs:
     needs: build_job_1
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: print comment
         run: |
           sleep 60s
@@ -19,6 +20,7 @@ jobs:
     needs: [build_job_1, deploy_job_2]
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: print comment
         run: |
           cat hello.txt
