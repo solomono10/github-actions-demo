@@ -24,7 +24,7 @@ jobs:
     needs: [build_job_1, deploy_job_2]
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # - uses: actions/checkout@v4
       - name: download file
         uses: actions/download-artifact@v4
         with:
