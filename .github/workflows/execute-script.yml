@@ -1,9 +1,10 @@
 name: Execute a script
 
 on:
-  pull_request:
-    types:
-      - closed
+  push:
+    branches:
+      - 'main'
+      - 'releases/**'
 
 jobs:
   build:
