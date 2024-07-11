@@ -1,6 +1,6 @@
 name: Execute a script
 on:
-  pull_request:
+  fork:
     # branches:
     #   - 'releases/**'
 jobs:
