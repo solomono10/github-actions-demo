@@ -1,8 +1,8 @@
 name: Execute a script
 on:
   pull_request:
-    branches:
-      - 'releases/**'
+    # branches:
+    #   - 'releases/**'
 jobs:
   build:
     runs-on: ubuntu-latest
