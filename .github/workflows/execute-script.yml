@@ -1,8 +1,10 @@
 name: Execute a script
+
 on:
-  fork:
-    # branches:
-    #   - 'releases/**'
+  pull_request:
+    types:
+      - closed
+
 jobs:
   build:
     runs-on: ubuntu-latest
