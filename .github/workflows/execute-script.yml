@@ -2,7 +2,7 @@ name: Execute a script
 on:
   push:
     branches:
-      - main
+      # - main
       - 'releases/**'
 jobs:
   build:
