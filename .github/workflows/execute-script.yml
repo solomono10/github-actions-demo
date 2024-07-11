@@ -1,6 +1,6 @@
 name: Execute a script
 on:
-  push:
+  pull_request:
     branches:
       - 'releases/**'
 jobs:
